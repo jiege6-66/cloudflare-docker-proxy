@@ -15,7 +15,7 @@ local_protocol = "http"
 [env.dev.vars]
 MODE = "debug"
 TARGET_UPSTREAM = "https://registry-1.docker.io"
-CUSTOM_DOMAIN = "docker.161798.xyz"      # ← 修正拼写
+CUSTOM_DOMAIN = "docker.161897.xyz"      # ← 修正拼写
 
 # 生产环境
 [env.production]
