@@ -4,7 +4,7 @@ compatibility_date = "2023-12-01"
 
 # 顶层变量（可选，把原来的 [env.vars] 挪到这里）
 [vars]
-CUSTOM_DOMAIN = "libcuda.so"
+CUSTOM_DOMAIN = "161897.xyz"
 
 [dev]
 ip = "0.0.0.0"
