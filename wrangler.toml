@@ -1,19 +1,23 @@
 name = "cloudflare-docker-proxy"
+main = "dist/main.js"              # ← 新增：指向 webpack 产物
 compatibility_date = "2023-12-01"
+
+# 顶层变量（可选，把原来的 [env.vars] 挪到这里）
+[vars]
+CUSTOM_DOMAIN = "libcuda.so"
 
 [dev]
 ip = "0.0.0.0"
 port = 8787
 local_protocol = "http"
 
-[env.vars]
-CUSTOM_DOMAIN = "libcuda.so"
-
+# 开发环境变量
 [env.dev.vars]
 MODE = "debug"
 TARGET_UPSTREAM = "https://registry-1.docker.io"
-CUSTOM_DOMAIN = "exmaple.com"
+CUSTOM_DOMAIN = "example.com"      # ← 修正拼写
 
+# 生产环境
 [env.production]
 name = "cloudflare-docker-proxy"
 # routes = [
@@ -30,6 +34,7 @@ name = "cloudflare-docker-proxy"
 MODE = "production"
 TARGET_UPSTREAM = ""
 
+# 预发布（可选）
 [env.staging]
 name = "cloudflare-docker-proxy-staging"
 # route = { pattern = "docker-staging.libcuda.so", custom_domain = true }
